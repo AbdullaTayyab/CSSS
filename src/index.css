@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans bg-slate-50 text-slate-800 dark:bg-[#090d16] dark:text-slate-100 transition-colors duration-200;
+  }
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* FullCalendar Custom Theme Adjustments */
+.fc {
+  --fc-border-color: #e2e8f0;
+  --fc-page-bg-color: transparent;
+  --fc-neutral-bg-color: #f8fafc;
+  --fc-list-event-hover-bg-color: #f1f5f9;
+  --fc-today-bg-color: rgba(99, 102, 241, 0.06);
+  font-family: inherit;
+}
+
+.dark .fc {
+  --fc-border-color: #1e293b;
+  --fc-neutral-bg-color: #0f172a;
+  --fc-list-event-hover-bg-color: #1e293b;
+  --fc-today-bg-color: rgba(99, 102, 241, 0.15);
+}
+
+.fc .fc-toolbar-title {
+  font-size: 1.25rem !important;
+  font-weight: 700;
+  color: inherit;
+}
+
+.fc .fc-button {
+  background-color: #ffffff !important;
+  color: #334155 !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 0.5rem !important;
+  padding: 0.4rem 0.8rem !important;
+  font-weight: 500 !important;
+  text-transform: capitalize !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.15s ease;
+}
+
+.dark .fc .fc-button {
+  background-color: #1e293b !important;
+  color: #f1f5f9 !important;
+  border: 1px solid #334155 !important;
+}
+
+.fc .fc-button:hover {
+  background-color: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+}
+
+.dark .fc .fc-button:hover {
+  background-color: #334155 !important;
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active,
+.fc .fc-button-primary:not(:disabled):active {
+  background-color: #4f46e5 !important;
+  color: #ffffff !important;
+  border-color: #4f46e5 !important;
+}
+
+.fc .fc-event {
+  border-radius: 6px !important;
+  padding: 2px 6px !important;
+  border: none !important;
+  font-size: 0.78rem !important;
+  font-weight: 500 !important;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.fc .fc-event:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.fc-daygrid-day-number {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: inherit;
+  padding: 6px 8px !important;
+}
+
+.fc-col-header-cell-cushion {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 8px !important;
+  color: #64748b;
+}
+
+.dark .fc-col-header-cell-cushion {
+  color: #94a3b8;
+}
